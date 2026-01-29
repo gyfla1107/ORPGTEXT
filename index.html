@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>문장 분리</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="layout">
+      <!-- 좌측: 입력 -->
+      <section class="panel panel-input" aria-label="입력 박스">
+        <div class="panel-head">
+          <div class="panel-title">입력</div>
+          <div class="row">
+            <button id="clearBtn" type="button">지우기</button>
+          </div>
+        </div>
+
+        <textarea id="input" placeholder="여러 문장을 입력하세요."></textarea>
+      </section>
+
+      <!-- 우측: 분리된 출력 -->
+      <section class="panel panel-list" aria-label="분리된 출력 박스">
+        <div class="panel-head">
+          <div id="count" class="small"></div>
+        </div>
+        <div id="list" class="list"></div>
+      </section>
+
+      <!-- 좌측: 결과 미리보기 -->
+      <section class="panel panel-preview" aria-label="결과 미리보기">
+        <div class="panel-head">
+          <div class="panel-title">결과 미리보기</div>
+          <div class="row">
+            <button id="copyAllBtn" type="button">전체 복사</button>
+          </div>
+        </div>
+
+        <textarea id="output" readonly placeholder="여기에 결과가 합쳐져서 표시됩니다."></textarea>
+      </section>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+  <script src="./storage.js"></script>
+
+</body>
+</html>
